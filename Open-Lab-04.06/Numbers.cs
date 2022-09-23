@@ -6,7 +6,26 @@ namespace Open_Lab_04._06
     {
         public int[] NoOdds(int[] numbers)
         {
-            throw new NotImplementedException();
+            int loopsNumber = 0;
+            int x = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    loopsNumber++;
+                }
+            }
+            int[] newArray = new int[loopsNumber];
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    newArray[x] = numbers[i];
+                    x++;
+                }
+            }
+            return newArray;
         }
     }
 }
